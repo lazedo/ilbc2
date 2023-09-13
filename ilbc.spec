@@ -1,12 +1,12 @@
 Summary:    iLBC is a library for the iLBC low bit rate speech codec.
-Name:       ilbc2
+Name:       ilbc22
 Version:    0.0.1
 Release:    1%{?dist}
 License:    Global IP Sound iLBC Public License, v2.0
 Group:      System Environment/Libraries
 URL:        http://www.soft-switch.org/voipcodecs
 BuildRoot:  %{_tmppath}/%{name}-%{version}-root
-Source:     http://www.soft-switch.org/downloads/voipcodecs/ilbc-0.0.1.tar.gz
+Source:     http://www.soft-switch.org/downloads/voipcodecsilbc2-0.0.1.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Docdir:     %{_prefix}/doc
@@ -23,13 +23,13 @@ iLBC is a library for the iLBC low bit rate speech codec.
 %package devel
 Summary:    iLBC development files
 Group:      Development/Libraries
-Requires:   ilbc2 = %{version}
+Requires:   ilbc22 = %{version}
 
 %description devel
 iLBC development files.
 
 %prep
-%setup -q -n ilbc-%{version}
+%setup -q -n ilbc2-%{version}
 
 %build
 ./bootstrap.sh

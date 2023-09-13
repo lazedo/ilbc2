@@ -25,7 +25,7 @@
 
 #include <inttypes.h>
 
-#include "ilbc.h"
+#include "ilbc2.h"
 #include "constants.h"
 
 /* ULP bit allocation */

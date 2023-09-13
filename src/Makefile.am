@@ -24,9 +24,9 @@ MAINTAINERCLEANFILES = Makefile.in
 
 AM_CPPFLAGS = -I$(top_builddir)
 
-lib_LTLIBRARIES = libilbc.la
+lib_LTLIBRARIES = libilbc2.la
 
-libilbc_la_SOURCES = anaFilter.c \
+libilbc2_la_SOURCES = anaFilter.c \
                      constants.c \
                      createCB.c \
                      doCPLC.c \
@@ -50,12 +50,9 @@ libilbc_la_SOURCES = anaFilter.c \
                      StateSearchW.c \
                      syntFilter.c
 
-libilbc_la_LDFLAGS = -version-info @ILBC_LT_CURRENT@:@ILBC_LT_REVISION@:@ILBC_LT_AGE@
+libilbc2_la_LDFLAGS = -version-info @ILBC_LT_CURRENT@:@ILBC_LT_REVISION@:@ILBC_LT_AGE@
 
-nobase_include_HEADERS = ilbc/ilbc.h \
-                         ilbc/version.h
-
-nodist_include_HEADERS = ilbc.h
+nodist_include_HEADERS = ilbc2.h
 
 noinst_HEADERS = anaFilter.h \
                  constants.h \
@@ -83,11 +80,11 @@ noinst_HEADERS = anaFilter.h \
 # We need to run at_dictionary_gen, so it generates the
 # at_interpreter_dictionary.h file
 
-DSP = libilbc.dsp
-VCPROJ = libilbc.vcproj
+DSP = libilbc2.dsp
+VCPROJ = libilbc2.vcproj
 
-WIN32SOURCES = $(libilbc_la_SOURCES) msvc/gettimeofday.c
-WIN32HEADERS = $(nobase_include_HEADERS) ilbc.h
+WIN32SOURCES = $(libilbc2_la_SOURCES) msvc/gettimeofday.c
+WIN32HEADERS = $(nobase_include_HEADERS) ilbc2.h
 
 DSPOUT = | awk '{printf("%s\r\n", $$0)}' >> $(DSP)
 VCPROJOUT = | awk '{printf("%s\r\n", $$0)}' >> $(VCPROJ)
@@ -125,7 +122,7 @@ $(VCPROJ): msvc/vc8proj.head msvc/vc8proj.foot Makefile.am
 	done; \
 	cat $(srcdir)/msvc/vc8proj.foot $(VCPROJOUT) )
 
-ilbc/version.h:
+ilbc2/version.h:
 	NOWDATE=`date --utc +"%Y%m%d"` ; \
 	NOWTIME=`date --utc +"%H%M%S"` ; \
 	sed 's/$$ilbc_RELEASE_DATE/'$$NOWDATE'/;s/$$ilbc_RELEASE_TIME/'$$NOWTIME'/' \

@@ -20,40 +20,12 @@
 
 AM_CFLAGS = $(COMP_VENDOR_CFLAGS)
 
-noinst_SCRIPTS = ilbc.spec
+# noinst_SCRIPTS = ilbc2.spec
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = ilbc.pc
+pkgconfig_DATA = ilbc2.pc
 
 MAINTAINERCLEANFILES = Makefile.in
-
-EXTRA_DIST = ilbc.spec \
-             wrapper.xsl \
-             gips_iLBClicense.pdf \
-             libilbc.vcproj \
-             doc/libilbc-doxygen \
-             src/ilbc/version.h.in \
-             src/libilbc.dsp \
-             src/libilbc.sln \
-             src/msvc/gettimeofday.c \
-             src/msvc/inttypes.h \
-             src/msvc/tgmath.h \
-             src/msvc/unistd.h \
-             src/msvc/sys/time.h \
-             src/msvc/ilbc.def \
-             src/msvc/msvcproj.head \
-             src/msvc/msvcproj.foot \
-             src/msvc/vc8proj.head \
-             src/msvc/vc8proj.foot \
-             debian/changelog \
-             debian/compat \
-             debian/control \
-             debian/copyright \
-             debian/libilbc.install \
-             debian/libilbc-dev.install \
-             debian/libilbc-doc.install \
-             debian/rules \
-             debian/watch
 
 if COND_DOC
     MAYBE_DOC=doc

@@ -27,7 +27,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-#include "ilbc.h"
+#include "ilbc2.h"
 #include "constants.h"
 #include "helpfun.h"
 #include "string.h"

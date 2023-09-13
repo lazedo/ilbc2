@@ -27,7 +27,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-#include "ilbc.h"
+#include "ilbc2.h"
 #include "StateConstructW.h"
 #include "LPCdecode.h"
 #include "iCBConstruct.h"

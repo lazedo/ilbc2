@@ -20,7 +20,7 @@
 
 # @start 1
 
-AC_INIT([ilbc], [0.0.1])
+AC_INIT([ilbc2], [0.0.1])
 
 CFLAGS="$CFLAGS $CONFIGURE_CFLAGS"
 CXXFLAGS="$CXXFLAGS $CONFIGURE_CXXFLAGS"
@@ -271,10 +271,10 @@ AC_CONFIG_FILES([Makefile
                  doc/Makefile
                  localtests/Makefile
                  src/Makefile
-                 src/ilbc.h
+                 src/ilbc2.h
                  tests/Makefile
-		 ilbc.pc
-                 ilbc.spec])
+		 ilbc2.pc
+                 ])
 
 AC_OUTPUT
 

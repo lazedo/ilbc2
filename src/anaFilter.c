@@ -27,7 +27,7 @@
 #include <string.h>
 
 #include "anaFilter.h"
-#include "ilbc.h"
+#include "ilbc2.h"
 
 /*----------------------------------------------------------------*
  *  LP analysis filter.

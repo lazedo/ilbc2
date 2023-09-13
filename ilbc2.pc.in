@@ -3,10 +3,10 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name: ilbc
+Name: ilbc2
 Description: An ilbc codec library
 Requires:
 Version: @VERSION@
-Libs: -L${libdir} -lilbc
+Libs: -L${libdir} -lilbc2
 Libs.private: -lm
 Cflags: -I${includedir}

@@ -26,7 +26,7 @@
 #include <inttypes.h>
 #include <math.h>
 
-#include "ilbc.h"
+#include "ilbc2.h"
 #include "gainquant.h"
 #include "getCBvec.h"
 #include "iCBConstruct.h"

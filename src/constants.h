@@ -21,7 +21,7 @@
 #define __iLBC_CONSTANTS_H
 
 #include "iLBC_define.h"
-#include "ilbc.h"
+#include "ilbc2.h"
 
 /* ULP bit allocation */
 
